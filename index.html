@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hiroshima e Nagasaki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    h1 {
+      font-family: "Lexend Exa", sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="Imagens/Radioactive-Radiation-Transparent-Background-PNG.png" alt="Logo" />
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">Tecnologias</a></li>
+        <li><a href="#">Consequências</a></li>
+        <li><a href="#">Questões Éticas</a></li>
+        <li><a href="#">Leituras Recomendadas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1>Hiroshima<br>e Nagasaki</h1>
+      </div>
+    </section>
+
+    <!-- Seção Resumo -->
+    <section class="resumo">
+      <h2>Resumo</h2>
+
+      <div class="resumo-container">
+        <!-- Imagem à esquerda -->
+        <div class="resumo-img">
+          <img src="/Imagens/imagem2.png" alt="" />
+        </div>
+
+        <!-- Texto à direita -->
+        <div class="resumo-texto">
+          <p>
+            Os bombardeamentos atômicos de Hiroshima e Nagasaki ocorreram no
+            final da Segunda Guerra Mundial, em agosto de 1945, quando os
+            Estados Unidos lançaram duas bombas nucleares sobre estas cidades
+            japonesas. O ataque a Hiroshima, com a bomba "Little Boy", ocorreu
+            em 6 de agosto, e o ataque a Nagasaki, com a bomba "Fat Man", em 9
+            de agosto. Estes foram os únicos casos na história em que armas
+            nucleares foram usadas em combate, e resultaram na rendição do Japão
+            e no fim da guerra.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blocos das Bombas -->
+      <div class="bombas-container">
+        
+        <!-- Little Boy -->
+        <!-- Little Boy -->
+<div class="bomba-card little-boy">
+  <img src="Imagens/Little_Boy_bomb-removebg-preview.png" alt="Little Boy" />
+  <h3>Little Boy</h3>
+  <span class="info">?</span>
+
+  <!-- Caixa de informações -->
+  <div class="bomba-info">
+    <p><strong>Little Boy</strong> foi a bomba lançada em Hiroshima no dia 6 de agosto de 1945. 
+    Utilizava urânio-235 como combustível nuclear e teve um poder de destruição equivalente a 
+    aproximadamente 15 mil toneladas de TNT.</p>
+  </div>
+</div>
+
+<!-- Fat Man -->
+<div class="bomba-card fat-man">
+  <img src="Imagens/Fat_Man__replica_of_nuclear_bomb_-removebg-preview.png" alt="Fat Man" />
+  <h3>Fat Man</h3>
+  <span class="info">?</span>
+
+  <!-- Caixa de informações -->
+  <div class="bomba-info">
+    <p><strong>Fat Man</strong> foi a bomba lançada sobre Nagasaki no dia 9 de agosto de 1945. 
+    Utilizava plutônio-239 como combustível nuclear e liberou uma energia equivalente a 
+    cerca de 21 mil toneladas de TNT.</p>
+  </div>
+</div>
+<script>
+  document.querySelectorAll('.info').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.bomba-card');
+      const infoBox = card.querySelector('.bomba-info');
+      infoBox.classList.toggle('ativo');
+    });
+  });
+</script>
+</section>
+  </main>
+</body>
+</html>
