@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
+
+/* ======================= RESET ======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: "Lexend", sans-serif;
+    overflow-x: hidden;
+}
+
+/* ======================= BACKGROUND ======================= */
+.background {
+    width: 100%;
+    min-height: 100vh;
+    background: center/cover no-repeat url('../Imagens/Tecnologias.jpg'); /* ou o outro background */
+    position: relative;
+}
+
+.background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.4); /* ajuste a opacidade se quiser */
+}
+
+/* ======================= HEADER ======================= */
+header {
+    width: 100%;
+    height: 80px;
+    background-color: #ff6600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+header h1 {
+    color: #1F1F1F;
+    font-size: 3em;
+    text-align: center;
+}
+
+/* ======================= MAIN ======================= */
+main {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+/* ======================= TEXTO ======================= */
+h2, h3 {
+    font-size: 3em;
+    margin-top: 70px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 10px 20px;
+}
+
+/* ======================= IMAGENS ======================= */
+.imagens-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.img-etica {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* ======================= SETA DE VOLTA ======================= */
+.back-arrow {
+    position: fixed;
+    bottom: 30px;    
+    left: 30px;      
+    width: 60px;     
+    height: 60px;    
+    z-index: 50;     
+    cursor: pointer;
+    transition: all 0.3s ease;    
+    border: 3px solid #ff6600;    
+    border-radius: 10px;          
+    background-color: transparent; 
+    display: flex;                 /* centraliza a imagem dentro da borda */
+    align-items: center;           
+    justify-content: center;       
+    padding: 8px;                  /* aumenta a distância entre borda e seta */
+    box-sizing: border-box;        /* garante que padding não aumente o tamanho total */
+}
+
+.back-arrow img {
+    width: 100%;
+    height: 100%;
+    margin: 0;            
+    object-fit: contain;
+    align-items: center;
+}
+
+.back-arrow:hover {
+    transform: scale(1);           
+    border-color: #ff9933;           
+    box-shadow: 0 0 10px 0 #ff9933;  
+}

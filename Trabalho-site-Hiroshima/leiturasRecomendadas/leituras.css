@@ -1,0 +1,118 @@
+body{
+    margin: 0svb;
+    background-color: #1F1F1F;
+}
+.inicial{
+    width: 100%;
+    height: 80px;
+    background-color: #ff6600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+header h1 {
+    color: #1F1F1F;
+    font-size: 3em;
+    font-family: "Lexend Exa", sans-serif;
+}
+
+    .inicial2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .imagens {
+      display: flex;
+      gap: 20px;
+    }
+
+    .imagem1,
+    .imagem2,
+    .imagem3 {
+      position: relative;
+      width: 500px;   /* largura fixa */
+      height: 600px;  /* altura fixa */
+      overflow: hidden;
+      border-radius: 10px;
+      margin-top: 100px;
+    }
+
+    .imagem1 img,
+    .imagem2 img,
+    .imagem3 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease; /* transição suave */
+    }
+
+    /* Efeito zoom ao passar o mouse */
+    .imagem1:hover img,
+    .imagem2:hover img,
+    .imagem3:hover img {
+      transform: scale(1.1); /* aumenta em 10% */
+    }
+
+    /* Texto sobreposto */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 0.3s ease, font-size 0.3s ease;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .imagem1:hover .overlay,
+    .imagem2:hover .overlay,
+    .imagem3:hover .overlay {
+      opacity: 1;
+      font-size: 26px;
+    }
+    .back-arrow {
+    position: fixed;
+    bottom: 30px;    
+    left: 30px;      
+    width: 60px;     
+    height: 60px;    
+    z-index: 50;     
+    cursor: pointer;
+    transition: all 0.3s ease;    
+    border: 3px solid #ff6600;    
+    border-radius: 10px;          
+    background-color: transparent; 
+    display: flex;                 /* centraliza a imagem dentro da borda */
+    align-items: center;           
+    justify-content: center;       
+    padding: 8px;                  /* aumenta a distância entre borda e seta */
+    box-sizing: border-box;        /* garante que padding não aumente o tamanho total */
+}
+
+.back-arrow img {
+    width: 100%;
+    height: 100%;
+    margin: 0;            
+    object-fit: contain;
+    align-items: center;
+}
+
+.back-arrow:hover {
+    transform: scale(1);           
+    border-color: #ff9933;           
+    box-shadow: 0 0 10px 0 #ff9933;  
+}
